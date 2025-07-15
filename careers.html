@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers - Fluff&Co</title>
+
+  <!-- Styles & Fonts -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script>
+    (function () {
+      const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.classList.add('dark-mode');
+    })();
+  </script>
+
+  <style>
+:root {
+  --primary-color: #3498db;
+  --primary-color-dark: #1d6dbf;
+  --text-color: #333;
+  --bg-color: #fff;
+  --card-bg: #f9f9f9;
+}
+
+.dark-mode {
+  --primary-color: #3399ff;
+  --primary-color-dark: #1a5fb4;
+  --text-color: #ddd;
+  --bg-color: #121212;
+  --card-bg: #1f1f1f;
+}
+
+/* Apply background and text colors globally */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cards and form background */
+.job-list li,
+form {
+  background-color: var(--card-bg);
+  transition: background-color 0.3s ease;
+}
+
+/* Links */
+a.mail-link {
+  color: var(--primary-color);
+}
+
+/* Button */
+form button {
+  background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
+}
+form button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Input, textarea, select borders */
+form input,
+form textarea,
+form select {
+  border: 1.5px solid #ccc;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .careers-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color, #3498db);
+    }
+    .careers-section p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--text-color, #333);
+    }
+    .job-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+    .job-list li {
+      background: var(--card-bg, #f9f9f9);
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .job-list strong {
+      font-weight: 700;
+      color: var(--primary-color, #3498db);
+    }
+    a.mail-link {
+      color: var(--primary-color, #3498db);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    form {
+      background: var(--card-bg, #f9f9f9);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto 3rem auto;
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: var(--text-color, #333);
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1rem;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form input:focus, form textarea:focus, form select:focus {
+      border-color: var(--primary-color, #3498db);
+      outline: none;
+    }
+    form button {
+      background-color: var(--primary-color, #3498db);
+      color: white;
+      padding: 0.7rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #1d6dbf;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar" role="navigation" aria-label="Primary navigation">
+    <div class="logo">Fluff&Co</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="careers.html" class="active">Careers</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button id="darkToggle" aria-label="Toggle Dark Mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+</header>
+
+<main>
+  <section class="careers-section" aria-label="Career opportunities at Fluff and Co">
+    <h1>Join Our Team</h1>
+    <p>Fluff&Co is always looking for passionate and talented individuals.</p>
+    <ul class="job-list">
+      <li><strong>Digital Marketing Specialist</strong> – Full-time</li>
+      <li><strong>Content Creator</strong> – Part-time</li>
+      <li><strong>SEO Analyst</strong> – Internship</li>
+    </ul>
+    <p>You can also send your resume to <a href="mailto:s241572628@studentmail.unimap.edu.my" class="mail-link">s241572628@studentmail.unimap.edu.my</a></p>
+
+    <h2>Apply Now</h2>
+    <form action="https://formsubmit.co/s241572628@studentmail.unimap.edu.my" method="POST">
+      <!-- Formsubmit hidden config -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="thank-you.html">
+
+      <label for="fullname">Full Name <span style="color:red">*</span></label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email Address <span style="color:red">*</span></label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="position">Position Applying For <span style="color:red">*</span></label>
+      <select id="position" name="position" required>
+        <option value="" disabled selected>Select a position</option>
+        <option value="Digital Marketing Specialist">Digital Marketing Specialist</option>
+        <option value="Content Creator">Content Creator</option>
+        <option value="SEO Analyst">SEO Analyst</option>
+      </select>
+
+      <label for="message">Why do you want to join Fluff&Co?</label>
+      <textarea id="message" name="message" rows="4" placeholder="Tell us more..."></textarea>
+
+      <!-- Resume upload not supported by Formsubmit free tier -->
+      <!-- <input type="file" id="resume" name="resume" accept=".pdf" /> -->
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Fluff&Co. All rights reserved.</p>
+</footer>
+
+<script>
+  const darkBtn = document.getElementById('darkToggle');
+  darkBtn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-mode');
+    const isDark = document.documentElement.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
+
+</body>
+</html>
